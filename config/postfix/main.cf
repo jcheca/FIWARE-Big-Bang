@@ -1,0 +1,14 @@
+myhostname = localhost.test.grayhats.com
+mydomain = test.grayhats.com
+myorigin = $myhostname
+mydestination = $myhostname, $mydomain
+mynetworks = 192.168.160.0/24
+
+smtpd_recipient_restrictions = permit_mynetworks, reject_unauth_destination
+
+alias_maps = pcre:/etc/postfix/aliases.regexp
+transport_maps = pcre:/etc/postfix/transport_maps
+
+# home_mailbox = Maildir/
+
+maillog_file = /dev/stdout

@@ -16,7 +16,7 @@ IDM_ADMIN_EMAIL=
 IDM_ADMIN_PASS=
 
 # Use Postfix (local delivery). (true or false) Default: false
-POSTFIX=
+POSTFIX=true
 
 # Use PostgreSQL as back-end database for Keyrock. (true or false) Default: false
 KEYROCK_POSTGRES=
@@ -54,13 +54,13 @@ IMAGE_ORION=telefonicaiot/fiware-orion:3.4.0
 # Cygnus
 #
 # Set a sub-domain name of Cygnus
-CYGNUS=
+CYGNUS=cygnus
 
 # Use Cygnus sink (true or false) Default: false
-CYGNUS_MONGO=
-CYGNUS_MYSQL=
-CYGNUS_POSTGRES=
-CYGNUS_ELASTICSEARCH=
+CYGNUS_MONGO=true
+CYGNUS_MYSQL=true
+CYGNUS_POSTGRES=true
+CYGNUS_ELASTICSEARCH=true
 
 # Expose port (none, local, all) Default: none
 CYGNUS_EXPOSE_PORT=
@@ -74,7 +74,7 @@ CYGNUS_LOG_LEVEL=INFO
 IMAGE_CYGNUS=fiware/cygnus-ngsi:2.10.0
 
 # Set a sub-domain name of Elasticsearch
-ELASTICSEARCH=
+ELASTICSEARCH=elastic
 
 # Elasticsearch Java options
 ELASTICSEARCH_JAVA_OPTS="-Xmx256m -Xms256m"
@@ -89,7 +89,7 @@ IMAGE_ELASTICSEARCH_DB=elasticsearch:7.6.2
 # Comet
 #
 # Set a sub-domain name of Comet
-COMET=
+COMET=comet
 
 # Expose port (none, local, all) Default: none
 COMET_EXPOSE_PORT=
@@ -105,7 +105,7 @@ IMAGE_COMET=fiware/sth-comet:2.8.0
 #
 # Perseo
 #
-PERSEO=
+PERSEO=perseo
 
 # Perseo Max age (default: 6000)
 PERSEO_MAX_AGE=
@@ -130,7 +130,7 @@ IMAGE_PERSEO_FE=telefonicaiot/perseo-fe:1.20.0
 # Quantumleap
 #
 # Set a sub-domain name of Quantumleap
-QUANTUMLEAP=
+QUANTUMLEAP=quantum
 
 # Expose port (none, local, all) Default: none
 QUANTUMLEAP_EXPOSE_PORT=
@@ -149,10 +149,10 @@ IMAGE_CRATE=crate:4.1.4
 # WireCloud
 #
 # Set a sub-domain name of WireCloud
-WIRECLOUD=
+WIRECLOUD=wirecloud
 
 # Set a sub-domain name of Ngsiproxy
-NGSIPROXY=
+NGSIPROXY=ngsiproxy
 
 # WireCloud
 #   https://github.com/Wirecloud/docker-wirecloud/blob/master/README.md
@@ -177,7 +177,7 @@ IMAGE_MEMCACHED=memcached:1
 # IoT Agent over Mosquitto
 #
 # Set a sub-domain name of Mosquitto
-MOSQUITTO=
+MOSQUITTO=mosquitto
 
 # Use MQTT (Port 1883). (true or false) Default: false
 MQTT_1883=
@@ -202,7 +202,7 @@ IMAGE_MOSQUITTO=eclipse-mosquitto:1.6
 # IoT Agent over HTTP
 #
 # Set a sub-domain name to use IoT Agent over HTTP.
-IOTAGENT_HTTP=
+IOTAGENT_HTTP=iotahttp
 
 # Authorization for IoT Agent over HTTP. (none, basic or bearer) Default: bearer
 IOTA_HTTP_AUTH=
@@ -217,7 +217,7 @@ IOTA_HTTP_BASIC_PASS=
 # IoT Agent for UltraLight 2.0
 #
 # Set a sub-domain name of IoT Agent for UltraLight 2.0
-IOTAGENT_UL=
+IOTAGENT_UL=iotaul
 
 IOTA_UL_DEFAULT_RESOURCE=/iot/ul
 IOTA_UL_TIMESTAMP=true
@@ -233,7 +233,7 @@ IMAGE_IOTAGENT_UL=fiware/iotagent-ul:1.16.2
 # IoT Agent for JSON
 #
 # Set a sub-domain name of IoT Agent for JSON
-IOTAGENT_JSON=
+IOTAGENT_JSON=iotajson
 
 IOTA_JSON_DEFAULT_RESOURCE=/iot/json
 IOTA_JSON_TIMESTAMP=true
@@ -249,11 +249,11 @@ IMAGE_IOTAGENT_JSON=fiware/iotagent-json:1.19.0
 # Node-RED
 #
 # Set a sub-domain name of Node-RED
-NODE_RED=
+NODE_RED=nodered
 
 # Node-RED multi instance
 # Number of Node-RED instance. default: 1
-NODE_RED_INSTANCE_NUMBER=
+NODE_RED_INSTANCE_NUMBER=3
 
 # username for Node-RED instance. default: node-red
 NODE_RED_INSTANCE_USERNAME=
@@ -277,7 +277,7 @@ IMAGE_NODE_RED=letsfiware/node-red:0.8.0-next
 # Grafana
 #
 # Set a sub-domain name of Grafana
-GRAFANA=
+GRAFANA=grafana
 
 # Logging level for Grafana
 #   https://grafana.com/docs/grafana/latest/administration/configuration/#configure-with-environment-variables
